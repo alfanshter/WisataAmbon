@@ -18,25 +18,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:fontFamily="@font/interbold"
-                android:gravity="center"
-                android:text="APLIKASI PEMANDU WISATA"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5sp"
-                android:fontFamily="@font/intersemibold"
-                android:gravity="center"
-                android:text="Ayo Keliling Banda Neira"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+                android:background="@drawable/imghome" />
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -50,18 +35,18 @@
                 android:useDefaultMargins="true">
 
                 <LinearLayout
+                    android:id="@+id/btnpenginapan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_weight="1"
-                    android:id="@+id/btnpenginapan"
                     android:gravity="center"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/btnhotel" />
+                        android:background="@drawable/btnpenginapan" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -69,15 +54,15 @@
                         android:layout_marginTop="2sp"
                         android:fontFamily="@font/intermedium"
                         android:text="Penginapan"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/birumentah" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/btnwisatabahari"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:gravity="center"
-                    android:id="@+id/btnwisatabahari"
                     android:orientation="vertical">
 
                     <ImageView
@@ -91,15 +76,15 @@
                         android:layout_marginTop="2sp"
                         android:fontFamily="@font/intermedium"
                         android:text="Wisata Bahari"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/birumentah" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/btnwisatasejarah"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:gravity="center"
-                    android:id="@+id/btnwisatasejarah"
                     android:orientation="vertical">
 
                     <ImageView
@@ -113,16 +98,16 @@
                         android:layout_marginTop="2sp"
                         android:fontFamily="@font/intermedium"
                         android:text="Wisata Sejarah"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/birumentah" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/btnwisataalam"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_marginTop="25sp"
                     android:gravity="center"
-                    android:id="@+id/btnwisataalam"
                     android:orientation="vertical">
 
                     <ImageView
@@ -136,15 +121,15 @@
                         android:layout_marginTop="2sp"
                         android:fontFamily="@font/intermedium"
                         android:text="Wisata Alam"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/birumentah" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/btncafe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_marginTop="25sp"
-                    android:id="@+id/btncafe"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -159,16 +144,16 @@
                         android:layout_marginTop="2sp"
                         android:fontFamily="@font/intermedium"
                         android:text="@string/cafe_resto"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/birumentah" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/btntransportasi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_marginTop="25sp"
                     android:gravity="center"
-                    android:id="@+id/btntransportasi"
                     android:orientation="vertical">
 
                     <ImageView
@@ -182,32 +167,39 @@
                         android:layout_marginTop="2sp"
                         android:fontFamily="@font/intermedium"
                         android:text="Transportasi"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/birumentah" />
                 </LinearLayout>
 
             </GridLayout>
 
-            <com.smarteist.autoimageslider.SliderView
-                android:id="@+id/slider"
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="150sp"
                 android:layout_centerInParent="true"
                 android:layout_margin="30sp"
+                app:cardCornerRadius="8sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtjudul"
-                app:sliderAnimationDuration="600"
-                app:sliderAutoCycleDirection="back_and_forth"
-                app:sliderIndicatorAnimationDuration="600"
-                app:sliderIndicatorEnabled="true"
-                app:sliderIndicatorGravity="center_horizontal|bottom"
-                app:sliderIndicatorMargin="15sp"
-                app:sliderIndicatorOrientation="horizontal"
-                app:sliderIndicatorPadding="3sp"
-                app:sliderIndicatorRadius="2sp"
-                app:sliderIndicatorSelectedColor="#5A5A5A"
-                app:sliderIndicatorUnselectedColor="#FFF"
-                app:sliderScrollTimeInSec="1" />
+                app:layout_constraintTop_toBottomOf="@+id/txtjudul">
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorEnabled="true"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15sp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3sp"
+                    app:sliderIndicatorRadius="2sp"
+                    app:sliderIndicatorSelectedColor="#5A5A5A"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1" />
+
+            </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
 

@@ -39,10 +39,10 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/intersemibold"
+                    android:fontFamily="@font/playfairdisplaybold"
                     android:text="Nama KAtegori"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 
@@ -73,12 +73,12 @@
                 android:id="@+id/txtdeskripsi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/intermedium"
+                android:fontFamily="@font/playfairdisplaybold"
                 android:text="Deskripsi"
                 android:layout_marginLeft="20sp"
                 android:layout_marginRight="20sp"
                 android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 app:layout_constraintTop_toBottomOf="@+id/slider" />
 
             <TextView
@@ -99,6 +99,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20sp"
                 android:id="@+id/btnarah"
+                android:fontFamily="@font/playfairdisplaybold"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
