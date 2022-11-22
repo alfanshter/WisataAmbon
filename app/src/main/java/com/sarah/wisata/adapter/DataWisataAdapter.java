@@ -49,7 +49,10 @@ public class DataWisataAdapter extends RecyclerView.Adapter<DataWisataAdapter.Fo
     @Override
     public void onBindViewHolder(FoodViewHolder holder, int position) {
         holder.txtNama.setText(dataList.get(position).getNama());
-        Picasso.get().load(new Constant().storage +dataList.get(position).getFoto().get(0).getFoto()).fit().centerCrop().into(holder.foto);
+        if (!dataList.get(position).getFoto().isEmpty()){
+            Picasso.get().load(new Constant().storage +dataList.get(position).getFoto().get(0).getFoto()).fit().centerCrop().into(holder.foto);
+
+        }
         holder.txtDeskripsi.setText(dataList.get(position).getDeskripsi());
 
         //jika penginapan
